@@ -185,7 +185,15 @@ class Updater implements IUpdater {
 	 */
 	public function copyFromStorage(IStorage $sourceStorage, string $source, string $target): void {
 		$this->copyOrRenameFromStorage($sourceStorage, $source, $target, function (ICache $sourceCache, ICacheEntry $sourceInfo) use ($target) {
-			$this->cache->copyFromCache($sourceCache, $sourceInfo, $target);
+			$parent = dirname($target);
+			$parentInCache = $this->cache->inCache($parent);
+			if (!$parentInCache) {
+				$parentData = $this->scanner->scan($parent, Scanner::SCAN_SHALLOW, -1, false);
+				$parentInCache = $parentData !== null;
+			}
+			if ($parentInCache) {
+				$this->cache->copyFromCache($sourceCache, $sourceInfo, $target);
+			}
 		});
 	}
 
@@ -205,21 +213,25 @@ class Updater implements IUpdater {
 
 		$sourceInfo = $sourceCache->get($source);
 
+		$sourceExtension = pathinfo($source, PATHINFO_EXTENSION);
+		$targetExtension = pathinfo($target, PATHINFO_EXTENSION);
+		$targetIsTrash = preg_match("/^d\d+$/", $targetExtension);
+
 		if ($sourceInfo !== false) {
 			if (!$this->storage->instanceOfStorage(ObjectStoreStorage::class)) {
 				$operation($sourceCache, $sourceInfo);
 			}
 
-			$sourceExtension = pathinfo($source, PATHINFO_EXTENSION);
-			$targetExtension = pathinfo($target, PATHINFO_EXTENSION);
-			$targetIsTrash = preg_match("/d\d+/", $targetExtension);
+			$isDir = $sourceInfo->getMimeType() === FileInfo::MIMETYPE_FOLDER;
+		} else {
+			$isDir = $this->storage->is_dir($target);
+		}
 
-			if ($sourceExtension !== $targetExtension && $sourceInfo->getMimeType() !== FileInfo::MIMETYPE_FOLDER && !$targetIsTrash) {
-				// handle mime type change
-				$mimeType = $this->storage->getMimeType($target);
-				$fileId = $this->cache->getId($target);
-				$this->cache->update($fileId, ['mimetype' => $mimeType]);
-			}
+		if ($sourceExtension !== $targetExtension && !$isDir && !$targetIsTrash) {
+			// handle mime type change
+			$mimeType = $this->storage->getMimeType($target);
+			$fileId = $this->cache->getId($target);
+			$this->cache->update($fileId, ['mimetype' => $mimeType]);
 		}
 
 		if ($sourceCache instanceof Cache) {
