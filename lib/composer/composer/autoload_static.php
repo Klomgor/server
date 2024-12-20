@@ -21,6 +21,10 @@ class ComposerStaticInit749170dad3f5e7f9ca158f5a9f04f6a2
         array (
             'NCU\\' => 4,
         ),
+        'B' => 
+        array (
+            'Bamarni\\Composer\\Bin\\' => 21,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
@@ -40,6 +44,10 @@ class ComposerStaticInit749170dad3f5e7f9ca158f5a9f04f6a2
         array (
             0 => __DIR__ . '/../../..' . '/lib/unstable',
         ),
+        'Bamarni\\Composer\\Bin\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/bamarni/composer-bin-plugin/src',
+        ),
     );
 
     public static $fallbackDirsPsr4 = array (
@@ -52,6 +60,9 @@ class ComposerStaticInit749170dad3f5e7f9ca158f5a9f04f6a2
         'NCU\\Config\\Exceptions\\TypeConflictException' => __DIR__ . '/../../..' . '/lib/unstable/Config/Exceptions/TypeConflictException.php',
         'NCU\\Config\\Exceptions\\UnknownKeyException' => __DIR__ . '/../../..' . '/lib/unstable/Config/Exceptions/UnknownKeyException.php',
         'NCU\\Config\\IUserConfig' => __DIR__ . '/../../..' . '/lib/unstable/Config/IUserConfig.php',
+        'NCU\\Config\\Lexicon\\ConfigLexiconEntry' => __DIR__ . '/../../..' . '/lib/unstable/Config/Lexicon/ConfigLexiconEntry.php',
+        'NCU\\Config\\Lexicon\\ConfigLexiconStrictness' => __DIR__ . '/../../..' . '/lib/unstable/Config/Lexicon/ConfigLexiconStrictness.php',
+        'NCU\\Config\\Lexicon\\IConfigLexicon' => __DIR__ . '/../../..' . '/lib/unstable/Config/Lexicon/IConfigLexicon.php',
         'NCU\\Config\\ValueType' => __DIR__ . '/../../..' . '/lib/unstable/Config/ValueType.php',
         'NCU\\Federation\\ISignedCloudFederationProvider' => __DIR__ . '/../../..' . '/lib/unstable/Federation/ISignedCloudFederationProvider.php',
         'NCU\\Security\\Signature\\Enum\\DigestAlgorithm' => __DIR__ . '/../../..' . '/lib/unstable/Security/Signature/Enum/DigestAlgorithm.php',
@@ -678,6 +689,7 @@ class ComposerStaticInit749170dad3f5e7f9ca158f5a9f04f6a2
         'OCP\\Migration\\IOutput' => __DIR__ . '/../../..' . '/lib/public/Migration/IOutput.php',
         'OCP\\Migration\\IRepairStep' => __DIR__ . '/../../..' . '/lib/public/Migration/IRepairStep.php',
         'OCP\\Migration\\SimpleMigrationStep' => __DIR__ . '/../../..' . '/lib/public/Migration/SimpleMigrationStep.php',
+        'OCP\\Navigation\\Events\\LoadAdditionalEntriesEvent' => __DIR__ . '/../../..' . '/lib/public/Navigation/Events/LoadAdditionalEntriesEvent.php',
         'OCP\\Notification\\AlreadyProcessedException' => __DIR__ . '/../../..' . '/lib/public/Notification/AlreadyProcessedException.php',
         'OCP\\Notification\\IAction' => __DIR__ . '/../../..' . '/lib/public/Notification/IAction.php',
         'OCP\\Notification\\IApp' => __DIR__ . '/../../..' . '/lib/public/Notification/IApp.php',
@@ -851,11 +863,14 @@ class ComposerStaticInit749170dad3f5e7f9ca158f5a9f04f6a2
         'OCP\\TaskProcessing\\ShapeEnumValue' => __DIR__ . '/../../..' . '/lib/public/TaskProcessing/ShapeEnumValue.php',
         'OCP\\TaskProcessing\\Task' => __DIR__ . '/../../..' . '/lib/public/TaskProcessing/Task.php',
         'OCP\\TaskProcessing\\TaskTypes\\AudioToText' => __DIR__ . '/../../..' . '/lib/public/TaskProcessing/TaskTypes/AudioToText.php',
+        'OCP\\TaskProcessing\\TaskTypes\\ContextAgentInteraction' => __DIR__ . '/../../..' . '/lib/public/TaskProcessing/TaskTypes/ContextAgentInteraction.php',
         'OCP\\TaskProcessing\\TaskTypes\\ContextWrite' => __DIR__ . '/../../..' . '/lib/public/TaskProcessing/TaskTypes/ContextWrite.php',
         'OCP\\TaskProcessing\\TaskTypes\\GenerateEmoji' => __DIR__ . '/../../..' . '/lib/public/TaskProcessing/TaskTypes/GenerateEmoji.php',
         'OCP\\TaskProcessing\\TaskTypes\\TextToImage' => __DIR__ . '/../../..' . '/lib/public/TaskProcessing/TaskTypes/TextToImage.php',
         'OCP\\TaskProcessing\\TaskTypes\\TextToText' => __DIR__ . '/../../..' . '/lib/public/TaskProcessing/TaskTypes/TextToText.php',
+        'OCP\\TaskProcessing\\TaskTypes\\TextToTextChangeTone' => __DIR__ . '/../../..' . '/lib/public/TaskProcessing/TaskTypes/TextToTextChangeTone.php',
         'OCP\\TaskProcessing\\TaskTypes\\TextToTextChat' => __DIR__ . '/../../..' . '/lib/public/TaskProcessing/TaskTypes/TextToTextChat.php',
+        'OCP\\TaskProcessing\\TaskTypes\\TextToTextChatWithTools' => __DIR__ . '/../../..' . '/lib/public/TaskProcessing/TaskTypes/TextToTextChatWithTools.php',
         'OCP\\TaskProcessing\\TaskTypes\\TextToTextFormalization' => __DIR__ . '/../../..' . '/lib/public/TaskProcessing/TaskTypes/TextToTextFormalization.php',
         'OCP\\TaskProcessing\\TaskTypes\\TextToTextHeadline' => __DIR__ . '/../../..' . '/lib/public/TaskProcessing/TaskTypes/TextToTextHeadline.php',
         'OCP\\TaskProcessing\\TaskTypes\\TextToTextReformulation' => __DIR__ . '/../../..' . '/lib/public/TaskProcessing/TaskTypes/TextToTextReformulation.php',
@@ -1301,6 +1316,7 @@ class ComposerStaticInit749170dad3f5e7f9ca158f5a9f04f6a2
         'OC\\Core\\Command\\SystemTag\\Delete' => __DIR__ . '/../../..' . '/core/Command/SystemTag/Delete.php',
         'OC\\Core\\Command\\SystemTag\\Edit' => __DIR__ . '/../../..' . '/core/Command/SystemTag/Edit.php',
         'OC\\Core\\Command\\SystemTag\\ListCommand' => __DIR__ . '/../../..' . '/core/Command/SystemTag/ListCommand.php',
+        'OC\\Core\\Command\\TaskProcessing\\EnabledCommand' => __DIR__ . '/../../..' . '/core/Command/TaskProcessing/EnabledCommand.php',
         'OC\\Core\\Command\\TaskProcessing\\GetCommand' => __DIR__ . '/../../..' . '/core/Command/TaskProcessing/GetCommand.php',
         'OC\\Core\\Command\\TaskProcessing\\ListCommand' => __DIR__ . '/../../..' . '/core/Command/TaskProcessing/ListCommand.php',
         'OC\\Core\\Command\\TaskProcessing\\Statistics' => __DIR__ . '/../../..' . '/core/Command/TaskProcessing/Statistics.php',
@@ -1914,6 +1930,7 @@ class ComposerStaticInit749170dad3f5e7f9ca158f5a9f04f6a2
         'OC\\Repair\\Owncloud\\MoveAvatarsBackgroundJob' => __DIR__ . '/../../..' . '/lib/private/Repair/Owncloud/MoveAvatarsBackgroundJob.php',
         'OC\\Repair\\Owncloud\\SaveAccountsTableData' => __DIR__ . '/../../..' . '/lib/private/Repair/Owncloud/SaveAccountsTableData.php',
         'OC\\Repair\\Owncloud\\UpdateLanguageCodes' => __DIR__ . '/../../..' . '/lib/private/Repair/Owncloud/UpdateLanguageCodes.php',
+        'OC\\Repair\\RemoveBrokenProperties' => __DIR__ . '/../../..' . '/lib/private/Repair/RemoveBrokenProperties.php',
         'OC\\Repair\\RemoveLinkShares' => __DIR__ . '/../../..' . '/lib/private/Repair/RemoveLinkShares.php',
         'OC\\Repair\\RepairDavShares' => __DIR__ . '/../../..' . '/lib/private/Repair/RepairDavShares.php',
         'OC\\Repair\\RepairInvalidShares' => __DIR__ . '/../../..' . '/lib/private/Repair/RepairInvalidShares.php',

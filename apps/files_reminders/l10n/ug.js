@@ -2,7 +2,7 @@ OC.L10N.register(
     "files_reminders",
     {
     "File reminders" : "ھۆججەت ئەسكەرتىشلىرى",
-    "Reminder for {name}" : "{Name for ئەسكەرتىش",
+    "Reminder for {name}" : "{name} for ئەسكەرتىش",
     "View file" : "ھۆججەتنى كۆرۈش",
     "View folder" : "ھۆججەت قىسقۇچنى كۆرۈش",
     "Set file reminders" : "ھۆججەت ئەسكەرتىشلىرىنى بەلگىلەڭ",
@@ -11,9 +11,9 @@ OC.L10N.register(
     "Cancel" : "بىكار قىلىش",
     "Clear reminder" : "ئەسكەرتىش",
     "Set reminder" : "ئەسكەرتىش بەلگىلەڭ",
-    "Set reminder for \"{fileName}\"" : "\"{FileName}\" ئۈچۈن ئەسكەرتىش بەلگىلەڭ",
+    "Set reminder for \"{fileName}\"" : "\"{fileName}\" ئۈچۈن ئەسكەرتىش بەلگىلەڭ",
     "Set reminder at custom date & time" : "ئىختىيارى چېسلا ۋە ۋاقىتتا ئەسكەرتىش بەلگىلەڭ",
-    "Reminder set for \"{fileName}\"" : "\"{FileName}\" ئۈچۈن ئەسكەرتىش",
+    "Reminder set for \"{fileName}\"" : "\"{fileName}\" ئۈچۈن ئەسكەرتىش",
     "Failed to set reminder" : "ئەسكەرتىش بەلگىلەش مەغلۇب بولدى",
     "Reminder cleared for \"{fileName}\"" : "ئەسكەرتىش \"{fileName}\" ئۈچۈن تازىلاندى",
     "Failed to clear reminder" : "ئەسكەرتىشنى تازىلاش مەغلۇب بولدى",
@@ -26,7 +26,6 @@ OC.L10N.register(
     "This weekend" : "بۇ ھەپتە ئاخىرى",
     "Set reminder for this weekend" : "بۇ ھەپتە ئاخىرىدا ئەسكەرتىش بەلگىلەڭ",
     "Next week" : "كېلەر ھەپتە",
-    "Set reminder for next week" : "كېلەر ھەپتە ئەسكەرتىش بەلگىلەڭ",
-    "**📣 File reminders**\n\nSet file reminders." : "** 📣 ھۆججەت ئەسكەرتىشلىرى **\n\nھۆججەت ئەسكەرتىشلىرىنى بەلگىلەڭ."
+    "Set reminder for next week" : "كېلەر ھەپتە ئەسكەرتىش بەلگىلەڭ"
 },
 "nplurals=2; plural=(n != 1);");
