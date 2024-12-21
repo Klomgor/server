@@ -6,6 +6,7 @@ OC.L10N.register(
     "View file" : "Погледај фајл",
     "View folder" : "Погледај фолдер",
     "Set file reminders" : "Постави подсетнике о фајлу",
+    "**📣 File reminders**\n\nSet file reminders.\n\nNote: to use the `File reminders` app, ensure that the `Notifications` app is installed and enabled. The `Notifications` app provides the necessary APIs for the `File reminders` app to work correctly." : "**📣 Фајл подсетници**\n\nПоставите фајл подсетнике.\n\nНапомена: ако желите да користите апликацију `Фајл подсетници`, обезбедите да је инсталирана и укључена апликација `Обавештења`. Апликација `Обавештења` обезбеђује неопходне API-је уз чију помоћ апликација `Фајл подестници` функционише како треба.",
     "We will remind you of this file" : "Подсетићемо вас на овај фајл",
     "Please choose a valid date & time" : "Молимо вас да изаберете исправни датум и време",
     "Cancel" : "Откажи",
@@ -26,7 +27,6 @@ OC.L10N.register(
     "This weekend" : "Овог викенда",
     "Set reminder for this weekend" : "Поставља подсетник за овај викенд",
     "Next week" : "Наредне недеље",
-    "Set reminder for next week" : "Поставља подсетник за наредну недељу",
-    "**📣 File reminders**\n\nSet file reminders." : "**📣 Подсетници о фајлу**\n\nПостављање подсетника о фајлу."
+    "Set reminder for next week" : "Поставља подсетник за наредну недељу"
 },
 "nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);");
